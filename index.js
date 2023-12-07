@@ -34,7 +34,20 @@ function executar() {
     CLIENTE CIENTE DA POSSIVEL TAXA R$50,00<br>
     CLIENTE CIENTE DE RETORNO CASO NORMALIZE<br>`
   } 
+  
   else if (valorAtendimento == 3) {
+    pnumero = prompt("Numero de TELEFONE do cliente:");
+    phora = prompt("Horario do contato:");
+    divres = document.querySelector("div#res");
+
+    divres.innerHTML = `TENTATIVA DE CONTATO VIA LIGAÇÃO</br></br>
+
+    ${pnumero} XXXXXXX AS ${phora} (ANEXO)</br>
+<br>
+    ENVIADO TEMPLATE VIA WHATSAPP AS XXX (ANEXO)`;
+  }
+
+      else if (valorAtendimento == 4) {
     divres = document.querySelector("div#res");
 
     divres.innerHTML = `
@@ -48,20 +61,8 @@ function executar() {
     5G >> 80Mhz<br>
     `
   }
-  
-  else if (valorAtendimento == 4) {
-    pnumero = prompt("Numero de TELEFONE do cliente:");
-    phora = prompt("Horario do contato:");
-    divres = document.querySelector("div#res");
 
-    divres.innerHTML = `TENTATIVA DE CONTATO VIA LIGAÇÃO</br></br>
-
-    ${pnumero} XXXXXXX AS ${phora} (ANEXO)</br>
-
-    ENVIADO TEMPLATE VIA WHATSAPP AS XXX (ANEXO)`;
-  }
-
-    else if (valorAtendimento == 5) {
+    else if (valorAtendimento == 6) {
       divres = document.querySelector("div#res");
   
       divres.innerHTML = `
