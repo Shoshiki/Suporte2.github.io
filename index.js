@@ -1,5 +1,3 @@
-
-
 function executar() {
   let atednimento, valorAtendimento, divres, pnumero, phora, alerta;
   atednimento = document.querySelector("input#tipoatendimento");
@@ -61,8 +59,7 @@ function executar() {
     5G >> 80Mhz<br>
     `
   }
-
-    else if (valorAtendimento == 6) {
+    else if (valorAtendimento == 5) {
       divres = document.querySelector("div#res");
   
       divres.innerHTML = `
@@ -80,6 +77,18 @@ function executar() {
       5º Após conectar irá nos mandar uma foto do que apareceu.
       `
     }
+
+  else if (valorAtendimento == 6) {
+    divres = document.querySelector("div#res");
+
+    divres.innerHTML = 
+    `APÓS ANALISE, NÃO SERÁ CONCEDIDO DESCONTO CONFORME SOLICITADO NESSE PROTOCOLO<br>
+    <br>
+    MOTIVO DO DESCONTO NEGADO (DETALHADO)<br> 
+    <br>
+    SMS ENVIADO AS XX:XX (ANEXO.
+    `
+  }   
 
     else {
     alerta = alert("Não econtrado");
