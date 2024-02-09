@@ -1,3 +1,5 @@
+
+
 function executar() {
   let atednimento, valorAtendimento, divres, pnumero, phora, alerta;
   atednimento = document.querySelector("input#tipoatendimento");
