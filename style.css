@@ -1,33 +1,59 @@
-#Desconto {
-  background-color: red;
+.TUDO {
+ display: flex;
+ justify-content: space-around;
 }
 
-main #conteiner{
+.TUDO #conteiner {
+  background-color: #001230;
+
   height: 80vh;
   width: 80vh;
-  margin-left: 10px;
-  margin-top: 25px;
   opacity: 95%;
-  background-color: #001230;
   color: white;
   font-family: 'Roboto', sans-serif;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 2px 2px 5px #888;
-
+  margin: 10px;
 }
-
-#principal {
+.TUDO h1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.TUDO #principal {
   font-size: 14px;
   opacity: none;
+}
+
+#lista {
+display: flex;
+margin-left: 20px;
 
 }
 
-#principal h1 {
- text-align: center;
- margin-top: 20px;
+#lista ol {
+ margin: 10px;
+
+}
+
+#res {
+  margin-bottom: 10px;
+}
+
+.TUDO iframe {
+  background-color: rgb(0, 0, 0);
+  display:flex ;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #888;
+  z-index: 0;
+  margin: 10px;
 }
 
 #inputs {
@@ -46,21 +72,6 @@ input {
  display: flex;
  margin-top: 20px;
  margin-left: 10px;
-}
-
-#lista {
- display: flex;
- text-decoration: none;
- margin-top: 20px;
-
-}
-
-#lista ol {
- padding-left: 1.5vw;
-}
-
-#lista li {
- margin-top: 5px;
 }
 
 /*coisas*/
@@ -103,24 +114,11 @@ input {
   main {
     background: url(LogoEmex-neg.png) no-repeat center center;
     background-size: 50%;
-    height: 92vh;
+    height: 91vh;
     overflow-y: hidden;
 }
 
-main iframe {
-  height: 80vh;
-  width: 100vh;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #888;
-  position: absolute;
-  overflow-y: hidden;
-  top: 49%;
-  right: 1%;
-  transform: translate(-0%, -45.6%);
-  z-index: 0;
 
-}
 
 body {
   background-image: linear-gradient(
