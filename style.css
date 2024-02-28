@@ -206,7 +206,7 @@ body {
     transition: 0.3s;
   }
   
-  @media screen and (max-width: 9999px) {
+  @media screen and (max-width: 999px) {
     body {
       overflow-x: hidden;
     }
