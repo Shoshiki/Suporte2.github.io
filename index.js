@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
       infoMessage.innerHTML = `O procedimento vai ser o seguinte:<br><br>1º Irá retirar o cabo de rede conectado ao seu roteador e conectar direto ao computador.<br><br>2º Após conectar irá abrir o menu iniciar e pesquisar por painel de controle.<br><br>3º Irá clicar em rede e internet > central de rede e compartilhamento > configurar uma nova rede ou conexão > conectar-se à internet > banda larga pppoe.<br><br>4º Irá digitar o usuário: xxxxxx e senha: xxxxxx e irá clicar em conectar<br><br>5º Após conectar irá nos mandar uma foto do que apareceu.`;
     } 
     else if (dropdown.value === 'desconto-não-concedido') {
-      infoMessage.innerHTML = `APÓS ANALISE, NÃO SERÁ CONCEDIDO DESCONTO CONFORME SOLICITADO NESSE PROTOCOLO<br><br>MOTIVO DO DESCONTO NEGADO (DETALHADO)<br><br>SMS ENVIADO AS XX:XX (ANEXO.`;
+      infoMessage.innerHTML = `APÓS ANALISE, NÃO SERÁ CONCEDIDO DESCONTO CONFORME SOLICITADO NESSE PROTOCOLO<br><br>MOTIVO DO DESCONTO NEGADO (DETALHADO)<br><br>SMS ENVIADO AS XX:XX`;
     } 
     else if (dropdown.value === '------') {
       infoMessage.innerHTML = ``;
