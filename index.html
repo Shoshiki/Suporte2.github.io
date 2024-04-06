@@ -9,62 +9,69 @@
     <title>Scripts</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="https://flashman.emextelecom.com.br/devicelist" target="_blank">Suporte Avançado</a>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-list">
-                <li> <a href="http://10.200.200.10:8090/pages/viewpage.action?pageId=10518784" target="_blank">Confluence</a></li>
-                <li> <a href="escala.png" target="_blank">Escala</a></li>
-                <li> <a href="https://docs.google.com/spreadsheets/d/17rn3SlUT6-oyjKoIp-LB3uWcOFelramhx0SFdfZKB30/edit#gid=505141781" target="_blank">Planilha</a></li>
-                <li> <a href="http://monitor.emexinternet.com.br:3000/d/y0GPfLU4z/dashboard-emex?orgId=1&from=now-6h&to=now" target="_blank">Redes</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main> 
-        <div class="TUDO">
+  <header>
+    <nav>
+      <!--Logo-->
+     <a class="logo" href="https://flashman.emextelecom.com.br/devicelist" target="_blank">Suporte Avançado</a>
+
+     <!--Linhas para animação do menu-->
+        <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        </div>
+
+     <!--Navbar links-->
+      <ul class="nav-list">
+        <li> <a href="http://10.200.200.10:8090/pages/viewpage.action?pageId=10518784" target="_blank">Confluence</a></li>
+        <li> <a href="escala.png" target="_blank">Escala</a></li>
+        <li> <a href="https://docs.google.com/spreadsheets/d/17rn3SlUT6-oyjKoIp-LB3uWcOFelramhx0SFdfZKB30/edit#gid=505141781" target="_blank">Planilha</a></li>
+        <li> <a href="http://monitor.emexinternet.com.br:3000/d/y0GPfLU4z/dashboard-emex?orgId=1&from=now-6h&to=now" target="_blank">Redes</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main> 
+
+    <!--Caixa que Junta as div-->
+      <div class="TUDO">
         <div id="conteiner">
         <div id="principal"> 
-            <h1>Scripts para Atendimento</h1>
+        <h1>Scripts para Atendimento</h1>
             
-            <!--Caixa de seleção-->
+    <!--Caixa de seleção-->
   <div class="dropdown-container">
     <label for="dropdown"></label>
     <select id="dropdown" class="select2"></select>
   </div>
 
-  <!--esta some-->
-  <div id="infoContainer" class="hidden"> 
-    <p id="infoMessage"></p>
-  </div>
-  <hr>
-           <div id="lista">
-            <ol>
-              <li>O.S FTTX</li>
-              <li>O.S FTTH</li>
-              <li>Envio de SMS</li>
-              <li>Script Lentidão</li>
-              <li>Conexão PPOE</li>
-              <li>Desconto Não-Concedido
-              </li>
-            </ol>
-          </div>
-<div id="final">&copy; Pedro Dantas & João Porto</div>
+    <!--Hidden-->
 
-        </div> 
+  <textarea id="myTextarea" rows="4" cols="50" class="hidden"></textarea>
+       </div>
+  <hr>
+  <!--Caixa de Opções-->
+    <div id="lista">
+        <ol>
+        <li>O.S FTTX</li>
+        <li>O.S FTTH</li>
+        <li>Envio de SMS</li>
+        <li>Script Lentidão</li>
+        <li>Conexão PPOE</li>
+        <li>Desconto Não-Concedido</li>
+        </ol>
+    </div>
+    <footer id="final">&copy; Dantas & Porto</footer>
+      </div> 
+            <!--Desconto-->
+            <iframe src="https://falhas.emexinternet.com.br"></iframe>
+
         </div>
-          <iframe src="https://falhas.emexinternet.com.br">
-            
-          </iframe>
         </main>
 
 
  <Script src="mobile-navbar.js"></Script>
  <script src="index.js"></script>
+
 
 </body>
 </html>
