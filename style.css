@@ -1,3 +1,4 @@
+/*Div da Caixa de seleção*/
 .dropdown-container {
   text-align: center;
 }
@@ -11,6 +12,7 @@
   margin:10px;
 }
 
+/*Select*/
 select {
   background-color: #ffffff; 
   color: #000000; 
@@ -26,36 +28,43 @@ select option {
   color: #ffffff; 
 }
 
+/*Opção para sumir*/
 .hidden {
   display: none;
   opacity: 95%;
-
 }
 
-/*Onde aparece*/
-#infoContainer {
+/*Onde aparece o texto*/
+label {
+  align-self: center;
+  margin: 1%;
+}
+
+#myTextarea {
   color: #fff;
-  font-size: 14px;
-  text-align: none;
+  font-size: 15px;
+  text-align: left;
   background-color: #010b1e;
-  border-radius: 5px;
-  height: 30vh;
-  width: 70vh;
+  min-width: 70vh; 
+  min-height: 36vh;
   padding: 10px;
-  margin: auto;
+  margin-top: 10px;
+  margin-right: 6%;
+  margin-left: 4%;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 1px 1px 3px #888;
-
+  resize: vertical;
 }
 
-
+/*Div que junta as div container e principal*/
 .TUDO {
  display: flex;
  justify-content: space-around;
 }
 
+/*Estilo da caixa*/
 .TUDO #conteiner {
   background-color: #001230;
   height: 80vh;
@@ -90,14 +99,18 @@ margin-left: 20px;
 }
 
 #final {
-  text-align: center;
-  margin: 10px;
-  text-decoration: underline #fff
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline #fff;
+  color: white;
+  font-size: 15px;
 }
 
-.TUDO iframe {
+/*Descon*/
+iframe {
   background-color: rgb(0, 0, 0);
-  display:flex ;
+  display:flex;
   align-items: center;
   justify-content: center;
   height: 80vh;
@@ -173,8 +186,6 @@ input {
 }
 
 
-
-@media screen and (max-width: 9999px) {
 body {
   background-image: linear-gradient(
     to top right,
@@ -183,7 +194,7 @@ body {
     #0D0C58,
     #0A116C)
 }
-}
+  
   .nav-list {
     list-style: none;
     display: flex;
@@ -207,9 +218,10 @@ body {
     transition: 0.3s;
   }
   
-  @media screen and (max-width: 999px) {
+  @media(max-width: 999px)  {
     body {
       overflow-x: hidden;
+      overflow-y: hidden;
     }
     .nav-list {
       position: fixed;
@@ -261,3 +273,5 @@ body {
   .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
   }
+
+  
