@@ -41,8 +41,8 @@
       else if (dropdown.value === 'conexão-ppoe') {
         textarea.value = `O procedimento vai ser o seguinte:\n\n1º Irá retirar o cabo de rede conectado ao seu roteador e conectar direto ao computador.\n\n2º Após conectar irá abrir o menu iniciar e pesquisar por painel de controle.\n\n3º Irá clicar em rede e internet > central de rede e compartilhamento > configurar uma nova rede ou conexão > conectar-se à internet > banda larga pppoe.\n\n4º Irá digitar o usuário: xxxxxx e senha: xxxxxx e irá clicar em conectar\n\n5º Após conectar irá nos mandar uma foto do que apareceu.`;
       } 
-      else if (dropdown.value === 'desconto-não-concedido') {
-        textarea.value = `APÓS ANALISE, NÃO SERÁ CONCEDIDO DESCONTO CONFORME SOLICITADO NESSE PROTOCOLO\n\nMOTIVO DO DESCONTO NEGADO (DETALHADO)\n\nSMS ENVIADO AS XX:XX`;
+else if (dropdown.value === 'desconto-não-concedido') {
+        textarea.value = `APÓS ANALISE, NÃO SERÁ CONCEDIDO DESCONTO CONFORME SOLICITADO NESSE PROTOCOLO\n\nMOTIVO DO DESCONTO NEGADO:\n\nENVIADO TEMPLATE DE DESCONTO NÃO CONCEDIDO`;
       } 
       else if (dropdown.value === '------') {
         textarea.value = ``;
