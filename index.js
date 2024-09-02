@@ -1,7 +1,7 @@
 // Cria um evento com a função de barra de seleção
 
   document.addEventListener('DOMContentLoaded', function () {
-    const options = ['Selecione uma opção','O.S FTTX', 'O.S FTTH', 'Envio SMS','Script Lentidão' , 'Conexão PPOE' , 'Desconto Não-Concedido']; //Opções da barra de seleção
+    const options = ['Selecione uma opção','O.S FTTX', 'O.S FTTH', 'Tentativa Contato','Script Lentidão' , 'Conexão PPOE' , 'Desconto Não-Concedido']; //Opções da barra de seleção
     const dropdown = document.getElementById('dropdown'); //Puxa as informações da div dropdown
     const textarea = document.getElementById('myTextarea'); // Puxa as informações do textarea
   
@@ -27,11 +27,10 @@
       if (dropdown.value === 'o.s-fttx') {
         textarea.value = 'LED DA FONTE POE:\nNOME DO WIFI CONTINUA O MESMO:\nFEITO REBOOT:\nCABOS VERIFICADOS:\nTESTE COM CABO DIRETO NO COMPUTADOR PPOE:\nCOMO FINALIZOU ESSE CHECK LIST:\n\nTELEFONES CONFIRMADOS E ENDEREÇOS CONFIRMADOS\nCLIENTE CIENTE DO PRAZO DE [24/48] HORAS\nCLIENTE CIENTE DA POSSIVEL TAXA DE VISITA IMPRODUTIVA OU MATERIAL USADO\nCLIENTE CIENTE DE RETORNO CASO NORMALIZE\n';
       } 
-      else if (dropdown.value === 'envio-sms') {
-        let pnumero = prompt("Número de TELEFONE do cliente:");
-        let phora = prompt("Horário do contato:");
-        textarea.value = `TENTATIVA DE CONTATO VIA LIGAÇÃO\n\n${pnumero} XXXXXXX AS ${phora} (ANEXO)\nENVIADO TEMPLATE VIA WHATSAPP AS XXX (ANEXO)`;
-      } 
+      else if (dropdown.value === 'tentativa-contato') {
+        textarea.value = 'PRIMEIRA TENTATIVA DE CONTATO\n\nXXXXX >>\n\nTEMPLATE ENVIADO AS XXXX\n-----------------\nSEGUNDA TENTATIVA DE CONTATO\n\nXXXXX >>\n\nTEMPLATE ENVIADO AS XXXX\n-----------------\nTERCEIRA TENTATIVA DE CONTATO\n\nXXXXX >>\n\nTEMPLATE ENVIADO AS XXXX\n';
+      }
+    
       else if (dropdown.value === 'o.s-ftth') {
         textarea.value = `LUZES DA ONU:\nSTATUS DA ONU:\nFEITO TROCA DE TOMADA:\nNOME DO WIFI CONTINUA O MESMO:\nFEITO REBOOT:\nCABOS VERIFICADOS:\nONU ANALISADA E REAPROVISIONADA:\nCOMO FINALIZOU ESSE CHECK LIST:\n\nTELEFONES CONFIRMADO E ENDEREÇOS CONFIRMADOS\nCLIENTE CIENTE DO PRAZO DE [24/48] HORAS\nCLIENTE CIENTE DA POSSIVEL TAXA DE VISITA IMPRODUTIVA OU MATERIAL USADO\nCLIENTE CIENTE DE RETORNO CASO NORMALIZE\n`;
       } 
