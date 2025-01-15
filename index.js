@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } 
 
     else if (dropdown.value === 'script-plantão') {
-      textarea.value = 'Aguardando aprovação da Monitoria'; //'IDENTIFICADO CLIENTES DOWN EM XXXX(CIDADE) \n\nRUAS AFETADOS:\nXXX\nREFERÊNCIA:\nXXX\nINTERFACE DE CONEXÃO:\nXXX\n\nConfirmado XXXX (LOS ACESA, POE PISCANDO) com XX clientes \nEM MÉDIA XX CLIENTES (LISTA DOS NOMES ABAIXO DE 10)\n\nPRAZO INICIAL PARA NORMALIZAÇÃO ATÉ XX';
+      textarea.value = 'Aguardando aprovação da Monitoria'; 'IDENTIFICADO CLIENTES DOWN EM XXXX(CIDADE) \n\nRUAS AFETADOS:\nXXX\nREFERÊNCIA:\nXXX\nINTERFACE DE CONEXÃO:\nXXX\n\nConfirmado XXXX (LOS ACESA, POE PISCANDO) com XX clientes \nEM MÉDIA XX CLIENTES (LISTA DOS NOMES ABAIXO DE 10)\n\nPRAZO INICIAL PARA NORMALIZAÇÃO ATÉ XX';
     } 
 
     else if (dropdown.value === 'tentativa-contato') {
