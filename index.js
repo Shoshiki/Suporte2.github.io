@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const options = ['Selecione uma opção','O.S FTTX', 'O.S FTTH', 'O.S POTÊNCIA', 'O.S TITULARIDADE', 'Script Titularidade','Script Lentidão', 'Script Ppoe', 'Script Plantão', 'Script Falha','Tentativa Contato', 'Desconto Não-Concedido']; //Opções da barra de seleção
+  const options = ['Selecione uma opção','O.S FTTX', 'O.S FTTH', 'O.S POTÊNCIA', 'O.S TITULARIDADE', 'Script Titularidade', 'Script Ppoe', 'Script Plantão', 'Script Falha','Tentativa Contato', 'Desconto Não-Concedido']; //Opções da barra de seleção
   const dropdown = document.getElementById('dropdown'); //Puxa as informações da div dropdown
   const textarea = document.getElementById('myTextarea'); // Puxa as informações do textarea
 
@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
       textarea.value = `TROCA DE TITULARIDADE\n\nXXXNOMEXXXXX\n\n>ANTIGO<\nLOGIN AUTENTICAÇÃO: xxxx\nSENHA AUTENTICAÇÃO: xxxx\n\n>NOVO<\nLOGIN AUTENTICAÇÃO: xxxx\nSENHA AUTENTICAÇÃO: xxxx\n\n//LOGIN ALTERADO, ATENDIMENTO ENCERADO//`;
     } 
 
-    else if (dropdown.value === 'script-lentidão') {
-      textarea.value = `REALIZADO REINCIO DE CPE\nREALIZADO REINCIO DE ONU\nREALIZADO DESCONEXÃO PELO SISTEMA\nREALIZADO REBOOT DOS EQUIPAMENTOS\n\nALTERADA LARGURA DE BANDA DA REDE 2.4 E 5G\n2.4 >> 20Mhz\n5G >> 80Mhz\n`;
-    } 
+    //else if (dropdown.value === 'script-lentidão') {
+      //textarea.value = `REALIZADO REINCIO DE CPE\nREALIZADO REINCIO DE ONU\nREALIZADO DESCONEXÃO PELO SISTEMA\nREALIZADO REBOOT DOS EQUIPAMENTOS\n\nALTERADA LARGURA DE BANDA DA REDE 2.4 E 5G\n2.4 >> 20Mhz\n5G >> 80Mhz\n`;
+    //} 
   
     else if (dropdown.value === 'script-ppoe') {
       textarea.value = `O procedimento vai ser o seguinte:\n\n1º Irá retirar o cabo de rede conectado ao seu roteador e conectar direto ao computador.\n\n2º Após conectar irá abrir o menu iniciar e pesquisar por painel de controle.\n\n3º Irá clicar em rede e internet > central de rede e compartilhamento > configurar uma nova rede ou conexão > conectar-se à internet > banda larga pppoe.\n\n4º Irá digitar o usuário: xxxxxx e senha: xxxxxx e irá clicar em conectar\n\n5º Após conectar irá nos mandar uma foto do que apareceu.`;
