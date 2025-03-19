@@ -1,0 +1,159 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const options = ['Selecione uma opção', 'O.S POTÊNCIA', 'O.S TITULARIDADE', 'Script Titularidade', 'Script Ppoe', 'Script Plantão', 'Script Falha','Tentativa Contato', 'Desconto Não-Concedido']; //Opções da barra de seleção
+  const dropdown = document.getElementById('dropdown'); //Puxa as informações da div dropdown
+  const textarea = document.getElementById('myTextarea'); // Puxa as informações do textarea
+
+// Seleciona os elementos do checkbox
+const checkboxLOS = document.getElementById("checkboxLOS-os");
+const checkboxFTTX = document.getElementById("checkboxFTTX-os");
+const atendimentoOS = document.getElementById("atendimentoOS");
+
+function atualizarTexto() {
+
+    let texto = ``; 
+
+    if (checkboxLOS.checked) {
+        texto += ftthOS; //varivel que contem o texto da o.s
+    }
+
+    else if (checkboxFTTX.checked) {
+        texto +=fttxOS ;
+    }
+    else if(atendimentoOS.checked){
+
+        texto +=atendimentoRelato;
+    }
+
+    if (texto) {
+        textarea.style.display = "block"; 
+        textarea.value = texto; 
+    }
+    
+}
+
+checkboxLOS.addEventListener("change", atualizarTexto);// aciona a função para atualizar o texto do texto area de acordo com o checkbox marcado
+checkboxFTTX.addEventListener("change", atualizarTexto);
+atendimentoOS.addEventListener("change", atualizarTexto);
+
+
+document.querySelectorAll(".opcao").forEach((checkbox) => {
+  checkbox.addEventListener("change", function() {
+      if (this.checked) {
+          document.querySelectorAll(".opcao").forEach((cb) => {
+              if (cb !== this) cb.checked = false;
+          });
+      }
+  });
+});
+
+  //Cria uma função de opções da barra
+  options.forEach(function (option, index) {
+    const optionElement = document.createElement('option');
+    optionElement.value = option.toLowerCase().replace(' ', '-');
+    optionElement.text = option;
+
+    // Desativa a primeira opção (índice 0)
+    if (index === 0) {
+      optionElement.disabled = true;
+      optionElement.selected = true;
+    }
+
+    dropdown.add(optionElement);
+  });
+
+  dropdown.addEventListener('change', function () {
+    textarea.classList.add('hidden'); // Ocultar o textarea por padrão
+
+    // opções da barra 
+    // if (dropdown.value === 'o.s-fttx') {
+    //   textarea.value = 'LED DA FONTE POE:\nNOME DO WIFI CONTINUA O MESMO:\nFEITO REBOOT:\nCABOS VERIFICADOS:\n\nTELEFONE DE CONTATO E ENDEREÇO CONFIRMADO\nCLIENTE CIENTE DAS INFORMAÇÕES:\nPRAZO DE [24/48] HORAS\nPOSSÍVEL TAXA DE VISITA IMPRODUTIVA NO VALOR DE R$50,00\nRETORNO CASO ACESSO RETORNE';
+    // } 
+    //  if (dropdown.value === 'o.s-ftth') {
+    //   textarea.value = 'LUZES DA ONU:\nSTATUS DA ONU:\nFEITO TROCA DE TOMADA:\nFEITO REBOOT:\nCABOS VERIFICADOS:\nONU REAPROVISIONADA:\nCOMO FINALIZOU ESSE CHECK LIST:\n\nTELEFONE DE CONTATO E ENDEREÇO CONFIRMADO\nCLIENTE CIENTE DAS INFORMAÇÕES:\nPRAZO DE [24/48] HORAS\nPOSSÍVEL TAXA DE VISITA IMPRODUTIVA NO VALOR DE R$50,00\nRETORNO CASO ACESSO RETORNE';
+    // } 
+   if (dropdown.value === 'o.s-potência') {
+      textarea.value = '| IDENTIFICADO CLEINTE COM TX/RX  ALTERADO.\n\n> TX OU RX: -29 - ABRIR O.S DIRETO\n\nCLIENTE COM LENTIDÃO/OSCILAÇÕES:\n\nVERIFICADO TX :\nVERIFICADO RX:\n\nTESTE DE UPLOAD:\nCLIENTE COM QUEDAS: \nONU:\n\nTELEFONE DE CONTATO E ENDEREÇO CONFIRMADO\nCLIENTE CIENTE DAS INFORMAÇÕES:\nPRAZO DE [72] HORAS\nPOSSÍVEL TAXA DE VISITA IMPRODUTIVA NO VALOR DE R$50,00\nRETORNO CASO ACESSO RETORNE';
+    } 
+
+    else if (dropdown.value === 'o.s-titularidade') {
+      textarea.value = '> FAVOR TROCA LOGIN PPPOE DO CLIENTE\n\n/////RESETAR O ROTEADOR DO CLIENTE PARA COLOCAR UM NOVO LOGIN E SENHA DO PPPE, AO RESETAR  ENTRAR EM CONTATO COM A EQUIPE DE SUPORTE TÉCNICO PARA ALTERAR O LOGIN E SENHA DE AUTENTICAÇÃO/////\n\nTELEFONE DE CONTATO E ENDEREÇO CONFIRMADO\nCLIENTE CIENTE DO PRAZO DE 2 DIAS ÚTEIS \nCLIENTE CIENTE DE RETORNO CASO NORMALIZE';
+    } 
+
+    else if (dropdown.value === 'script-titularidade') {
+      textarea.value = `TROCA DE TITULARIDADE\n\nXXXNOMEXXXXX\n\n>ANTIGO<\nLOGIN AUTENTICAÇÃO: xxxx\nSENHA AUTENTICAÇÃO: xxxx\n\n>NOVO<\nLOGIN AUTENTICAÇÃO: xxxx\nSENHA AUTENTICAÇÃO: xxxx\n\n//LOGIN ALTERADO, ATENDIMENTO ENCERADO//`;
+    } 
+
+    //else if (dropdown.value === 'script-lentidão') {
+      //textarea.value = `REALIZADO REINCIO DE CPE\nREALIZADO REINCIO DE ONU\nREALIZADO DESCONEXÃO PELO SISTEMA\nREALIZADO REBOOT DOS EQUIPAMENTOS\n\nALTERADA LARGURA DE BANDA DA REDE 2.4 E 5G\n2.4 >> 20Mhz\n5G >> 80Mhz\n`;
+    //} 
+  
+    else if (dropdown.value === 'script-ppoe') {
+      textarea.value = `O procedimento vai ser o seguinte:\n\n1º Irá retirar o cabo de rede conectado ao seu roteador e conectar direto ao computador.\n\n2º Após conectar irá abrir o menu iniciar e pesquisar por painel de controle.\n\n3º Irá clicar em rede e internet > central de rede e compartilhamento > configurar uma nova rede ou conexão > conectar-se à internet > banda larga pppoe.\n\n4º Irá digitar o usuário: xxxxxx e senha: xxxxxx e irá clicar em conectar\n\n5º Após conectar irá nos mandar uma foto do que apareceu.`;
+    } 
+
+    else if (dropdown.value === 'script-falha') {
+      textarea.value = 'FALHA DE REDE LOCAL - RUA, BAIRRO OU CIDADE AFETADO - (SLOT XX PON XX)\n\nID XXX\n\nCLIENTES QUE RESIDEM NA RUA XX, BAIRRO XX, CIDADE XX, IRÃO SENTIR FALTA DE ACESSO DEVIDO À UM (A) (ROMPIMENTO DE FIBRA QUE ATENDE A LOCALIDADE OU FALHA NO EQUIPAMENTO QUE ATENDE A LOCALIDADE)\n\nNOSSA EQUIPE JÁ ESTÁ CIENTE E FAZENDO O POSSÍVEL PARA NORMALIZAR O QUANTO ANTES.\n\nPRAZO PARA NORMALIZAÇÃO ATÉ ÀS XX:XX HORAS\n\nINICIO DA FALHA: XX/XX/XXXX  XX:XX';
+    } 
+
+    else if (dropdown.value === 'script-plantão') {
+      textarea.value = 'IDENTIFICADO CLIENTES DOWN EM XXXX(CIDADE) \n\nRUAS AFETADOS:\nXXX\nREFERÊNCIA:\nXXX\nINTERFACE DE CONEXÃO:\nXXX\n\nConfirmado XXXX (LOS ACESA, POE PISCANDO) com XX clientes \nEM MÉDIA XX CLIENTES (LISTA DOS NOMES ABAIXO DE 10)\n\nPRAZO INICIAL PARA NORMALIZAÇÃO ATÉ XX';
+    } 
+
+    else if (dropdown.value === 'tentativa-contato') {
+      textarea.value = 'XXXXXXX DIA DE TENTATIVA DE CONTATO FEITA VIA TELEFONE\n\nXXXXXXXX >> SEM SUCESSO, MOTIVO > ANEXADO<\n\nTEMPLATE ENVIADO AS XXXX';
+    }
+
+else if (dropdown.value === 'desconto-não-concedido') {
+      textarea.value = `APÓS ANALISE, NÃO SERÁ CONCEDIDO DESCONTO CONFORME SOLICITADO NESSE PROTOCOLO\n\nMOTIVO DO DESCONTO NEGADO:\n\nENVIADO TEMPLATE DE DESCONTO NÃO CONCEDIDO`;
+    } 
+    else if (dropdown.value === '------') {
+      textarea.value = ``;
+    }
+    if (dropdown.value !== 'default') {
+      // Se uma opção válida for selecionada, exibir o textarea
+      textarea.classList.remove('hidden');
+    }
+});
+});
+
+ftthOS = `ONU OFFLINE NO SISTEMA
+[LOS VERMELHA / PON PISCANDO / LUZES APAGADAS - FEITA TROCA DE TOMADA SEM SUCESSO]
+
+OU
+
+TESTES REALIZADOS
+ONU ONLINE NO SISTEMA, VERIFICADA E REAPROVISIONADA
+FEITO REBOOT E VERIFICADO OS CABOS
+[ROTEADOR DE PLATAFORMA CONFIGURADO / ROTEADOR PARTICULAR, INFORMA QUE NOME DO WIFI CONTINUA O MESMO]
+
+TELEFONE DE CONTATO E ENDEREÇO CONFIRMADO
+CLIENTE CIENTE DO PRAZO DE [24/48] HORAS
+CLIENTE CIENTE DE POSSÍVEL TAXA DE VISITA IMPRODUTIVA NO VALOR DE R$ 50,00
+CLIENTE CIENTE DE RETORNO CASO NORMALIZE
+`;
+fttxOS = `TESTES REALIZADOS:
+FONTE POE [APAGADA, TROCA DE TOMADA SEM SUCESSO / PISCANDO MESMO APÓS RETIRAR O CABO DA POE / PISCANDO APENAS QUANDO CONECTADA NA POE, PORÉM NÃO IDENTIFICADO FALHA]
+[CABO VERIFICADO E  REBOOT REALIZADO]
+
+OU
+
+FONTE POE ACESA E CONTÍNUA
+FEITO REBOOT E VERIFICADO OS CABOS
+[ROTEADOR DE PLATAFORMA CONFIGURADO / ROTEADOR PARTICULAR, INFORMA QUE NOME DO WIFI CONTINUA O MESMO]
+
+TELEFONE DE CONTATO E ENDEREÇO CONFIRMADO
+CLIENTE CIENTE DO PRAZO DE [24/48] HORAS
+CLIENTE CIENTE DE POSSÍVEL TAXA DE VISITA IMPRODUTIVA NO VALOR DE R$ 50,00
+CLIENTE CIENTE DE RETORNO CASO NORMALIZE`;
+
+atendimentoRelato  = `NOME DA PESSOA QUE ENTROU EM CONTATO: xx
+RELATO DETALHADO DO CLIENTE: xxx
+
+>> CHECK LIST PREENCHIDA
+
+// CASO SEJA OS DE 24 HORAS/RETENÇÃO/REINCIDENCIA DESCREVER O MOTIVO, CASO O CONTRÁRIO APAGAR ESSA LINHA.
+
+TELEFONE DE CONTATO E ENDEREÇO CONFIRMADO
+CLIENTE CIENTE DO PRAZO DE [24/48] HORAS
+CLIENTE CIENTE DE POSSÍVEL TAXA DE VISITA IMPRODUTIVA NO VALOR DE R$ 50,00
+CLIENTE CIENTE DE RETORNO CASO NORMALIZE`

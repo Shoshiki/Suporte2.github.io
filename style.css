@@ -1,0 +1,310 @@
+/*botão*/
+
+#container-a {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display:none;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #888;
+  z-index: 0;
+  margin: 10px;
+  opacity: 95%;
+}
+.hide {
+  display: none;
+}
+
+
+/*Div da Caixa de seleção*/
+.dropdown-container {
+  text-align: center;
+}
+
+/*Caixa de seleção*/
+#dropdown {
+  color: black;
+  height: 4vh;
+  width: 40vh;
+  font-size: 15px;
+  margin:10px;
+}
+
+/*Select*/
+select {
+  background-color: #ffffff; 
+  color: #000000; 
+  border: 3px solid #ffffff; 
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #888;
+  width: 200px; 
+}
+
+/* dentro do select */
+select option {
+  background-color: #011232;
+  color: #ffffff; 
+}
+
+/*Opção para sumir*/
+.hidden {
+  display: none;
+  opacity: 95%;
+}
+
+/*Onde aparece o texto*/
+label {
+  align-self: center;
+  margin: 1%;
+}
+
+#myTextarea {
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  background-color: #010b1e;
+  min-width: 70vh; 
+  min-height: 36vh;
+  padding:5px;
+  padding-right:5px;
+  margin-top: 10px;
+  margin-right: 4%;
+  margin-left: 4%;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #888;
+  resize: vertical;
+}
+
+/*Div que junta as div container e principal*/
+.TUDO {
+ display: flex;
+ justify-content: space-around;
+}
+
+/*Estilo da caixa*/
+.TUDO #conteiner {
+  background-color: #001230;
+  height: 80vh;
+  width: 80vh;
+  opacity: 95%;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #888;
+  margin: 10px;
+  overflow: hidden;
+}
+.TUDO h1 {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.TUDO #principal {
+  font-size: 14px;
+  opacity: none;
+}
+
+#lista {
+display: flex;
+margin-left: 20px;
+}
+
+#lista ol {
+ margin: 5px;
+ list-style:disc;
+}
+
+#final {
+  margin-top: 10%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline #fff;
+  color: white;
+  font-size: 15px;
+}
+
+/*Descon*/
+#Desconto iframe {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #888;
+  z-index: 0;
+  margin: 10px;
+  opacity: 95%;
+}
+
+#inputs {
+ display: flex;
+ justify-content: center;
+ margin-top: 25px;
+ 
+}
+
+input {
+ box-shadow: 2px 2px 0 #ffffff33;
+ padding: 5px;
+ border-radius: 5px;
+}
+#res {
+ display: flex;
+ margin-top: 20px;
+ margin-left: 10px;
+}
+
+/*coisas*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+h2 {
+color: #ffff; 
+font-weight: bold; 
+bottom: 1px solid;
+text-shadow: 
+        0 2px 0 rgb(0, 0, 0);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  height: 8vh;
+  background-image: linear-gradient(
+  to top,
+  #0D0A4F,
+  #0D0C58,
+  #0A116C)
+ 
+}
+
+main {
+  background: url(LogoEmex-neg.png) no-repeat center center;
+  background-size: 50%;
+  height: 92vh;
+  overflow-y: hidden;
+}
+
+
+body {
+background-image: linear-gradient(
+  to top right,
+  #0826A2,
+  #0646E4,
+  #0D0C58,
+  #0A116C)
+  
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media(max-width: 99999px)  {
+  body {
+    overflow-x: hidden;
+
+  }
+  .nav-list {
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    font-size: 20px;
+    width: 50%;
+    height: 92vh;
+    background:#0A116C;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
